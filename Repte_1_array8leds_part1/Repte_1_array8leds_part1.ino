@@ -13,11 +13,10 @@ const int Led0 = 3;
 const int Led1 = 4;
 const int Led2 = 5;
 const int Led3 = 6;
-const int Led4 = 7;
-const int Led5 = 9;
-const int Led6 = 10;
-const int Led7 = 11;
-const int Led8 = 12;
+const int Led4 = 9;
+const int Led5 = 10;
+const int Led6 = 11;
+const int Led7 = 12;
 
 //****************************Setup************************************
 
@@ -31,7 +30,7 @@ void setup()
   pinMode(Led5,OUTPUT);
   pinMode(Led6,OUTPUT);
   pinMode(Led7,OUTPUT);
-  pinMode(Led8,OUTPUT);
+
 }
 //***************************Loop**************************************
 
@@ -45,7 +44,7 @@ void loop ()
   digitalWrite(Led5, HIGH);
   digitalWrite(Led6, HIGH);
   digitalWrite(Led7, HIGH);
-  digitalWrite(Led8, HIGH);
+
 
   delay(500);
 
@@ -58,7 +57,6 @@ void loop ()
   digitalWrite(Led5, LOW );
   digitalWrite(Led6, LOW );
   digitalWrite(Led7, LOW );
-  digitalWrite(Led8, LOW );
 
    delay (500);
   
