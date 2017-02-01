@@ -1,7 +1,7 @@
 /***********************************************************************************
  **
  **                    Repte 1. Array de 8 Led's     
- **                                Part 4
+ **                                Part 5
  **                            
  **   Nom: Núria Cordero Serra               Date: 26/01/2017
  **********************************************************************************/
@@ -9,9 +9,12 @@
 
 //****************************Variables********************************
 
-const int ledPin[] = {3, 4, 5, 6};   
-int ledNum = 9;                      
-int pausa = 500;   
+const int ledPin[] = {3,4,5,6,9, 10, 11, 12};   
+const int buttonPin = 2 ;                      
+boolean buttonEstat = LOW ;  
+
+ int ledNum = 8 ; 
+ int num = 9;
 //****************************Setup************************************
 
 void setup()
@@ -20,20 +23,27 @@ void setup()
   {
     pinMode(ledPin[n], OUTPUT);
   }
+  pinMode(buttonPin,INPUT);
+  for (int m= 0; m <ledNum; m ++)
+  { 
+    digitalWrite(ledPin [m],0);
+  }
 }
 
 //***************************Loop**************************************
 
 void loop()
 {
-  for(int n = 0; n < 16; n++)     
+  buttonEstat= digitalRead (buttonPin); 
+  if (buttonEstat == HIGH )
   {
-    for(int j = 0; j < ledNum ; j++)   
-    { 
-      digitalWrite(ledPin[j], bitRead(n, j));
+    num = num +1 ; 
+    if (num == 16 ) num = 0;
+    for (int m =0;m<ledNum ; m ++)
+    {
+      digitalWrite (ledPin [m],bitRead (num,m));
     }
-    delay(pausa);                 
+    delay (500);
   }
 }
-
 //***************************Funcions**********************************
