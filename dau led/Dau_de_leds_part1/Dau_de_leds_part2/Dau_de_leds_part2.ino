@@ -9,12 +9,12 @@
 
 
 //****************************Variables********************************
-const int leds4 = 4;          
-const int leds3 = 5;          
-const int leds2 = 6;         
-const int led1  = 7;          
+const int leds4 = 5;          
+const int leds3 = 6;          
+const int leds2 = 7;         
+const int led1  = 8;          
 const int boto = 9;
-boolean botoEstat =LOW;
+boolean botoEstat = LOW;
 
 int num = 1;
 
@@ -55,7 +55,7 @@ void loop()
     case 3:  
       digitalWrite(led1, HIGH);    
       digitalWrite(leds3, HIGH);  
-      break;
+      break;8
     case 4:   
       digitalWrite(leds2, HIGH);   
       digitalWrite(leds3, HIGH); 
